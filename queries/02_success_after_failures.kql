@@ -1,0 +1,8 @@
+let Failures = SigninLogs
+| where ResultType == 50126
+| summarize Fails = count() by UserPrincipalName, IPAddress
+| where Fails >= 5;
+SigninLogs
+| where ResultType == 0
+| join kind=inner Failures on UserPrincipalName, IPAddress
+| project TimeGenerated, UserPrincipalName, IPAddress, Country, Fails
