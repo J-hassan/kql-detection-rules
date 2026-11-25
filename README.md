@@ -34,7 +34,7 @@ A small collection of KQL detection queries for common identity-based attacks, m
 ### 2. Success after failures
 - **What it detects:** a possible account compromise after a brute-force attempt.
 - **Result:** flags alice's successful login right after the failures.
-- ![Success after failures result](screenshots/02_success_after_failures.png)
+- ![Success after failures result](screenshots/02_success_after_failure.png)
 
 ### 3. Password spray
 - **What it detects:** one IP failing logins against 4 or more different user accounts.
