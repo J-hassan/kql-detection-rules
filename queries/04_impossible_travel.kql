@@ -1,0 +1,6 @@
+SigninLogs
+| where ResultType == 0
+| sort by UserPrincipalName asc, TimeGenerated asc
+| extend PrevUser = prev(UserPrincipalName), PrevCountry = prev(Country), PrevTime = prev(TimeGenerated)
+| where UserPrincipalName == PrevUser and Country != PrevCountry and (TimeGenerated - PrevTime) < 1h
+| project TimeGenerated, UserPrincipalName, PrevCountry, Country, GapMinutes = datetime_diff('minute', TimeGenerated, PrevTime)
