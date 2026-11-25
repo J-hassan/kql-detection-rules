@@ -1,0 +1,24 @@
+.set-or-replace SigninLogs <|
+datatable(TimeGenerated:datetime, UserPrincipalName:string, IPAddress:string, Country:string, ResultType:int, AppDisplayName:string)
+[
+datetime(2026-11-25 08:00:00), "alice@contoso.com", "198.51.100.10", "PK", 0, "Office 365",
+datetime(2026-11-25 08:30:00), "bob@contoso.com", "198.51.100.20", "PK", 0, "Office 365",
+datetime(2026-11-25 09:00:00), "bob@contoso.com", "198.51.100.20", "PK", 0, "Azure Portal",
+datetime(2026-11-25 09:30:00), "bob@contoso.com", "192.0.2.77", "BR", 0, "Azure Portal",
+datetime(2026-11-25 10:00:00), "alice@contoso.com", "203.0.113.50", "RU", 50126, "Office 365",
+datetime(2026-11-25 10:00:30), "alice@contoso.com", "203.0.113.50", "RU", 50126, "Office 365",
+datetime(2026-11-25 10:01:00), "alice@contoso.com", "203.0.113.50", "RU", 50126, "Office 365",
+datetime(2026-11-25 10:01:30), "alice@contoso.com", "203.0.113.50", "RU", 50126, "Office 365",
+datetime(2026-11-25 10:02:00), "alice@contoso.com", "203.0.113.50", "RU", 50126, "Office 365",
+datetime(2026-11-25 10:02:30), "alice@contoso.com", "203.0.113.50", "RU", 50126, "Office 365",
+datetime(2026-11-25 10:03:00), "alice@contoso.com", "203.0.113.50", "RU", 50126, "Office 365",
+datetime(2026-11-25 10:03:30), "alice@contoso.com", "203.0.113.50", "RU", 50126, "Office 365",
+datetime(2026-11-25 10:04:00), "alice@contoso.com", "203.0.113.50", "RU", 0, "Office 365",
+datetime(2026-11-25 11:00:00), "carol@contoso.com", "198.18.0.5", "NG", 50126, "Office 365",
+datetime(2026-11-25 11:00:20), "dave@contoso.com", "198.18.0.5", "NG", 50126, "Office 365",
+datetime(2026-11-25 11:00:40), "erin@contoso.com", "198.18.0.5", "NG", 50126, "Office 365",
+datetime(2026-11-25 11:01:00), "frank@contoso.com", "198.18.0.5", "NG", 50126, "Office 365",
+datetime(2026-11-25 11:01:20), "alice@contoso.com", "198.18.0.5", "NG", 50126, "Office 365",
+datetime(2026-11-25 11:30:00), "carol@contoso.com", "198.51.100.30", "PK", 0, "Office 365",
+datetime(2026-11-25 12:00:00), "dave@contoso.com", "198.51.100.40", "PK", 0, "Office 365"
+]
